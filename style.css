@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #ad4387;
+}
+
+.logo{
+    margin: 0 100px;
+    color: #fff;
+    line-height: 80px;
+    font-size: 35px;
+}
+ul{
+    float: right;
+   
+}
+ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 50px;
+
+}
+ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    transition: all linear 0.5s;
+    border-radius: 4px;
+}
+
+ ul li a.active ,ul li a:hover{
+background-color: #ffffff;
+color: #ad4387;
+}
+
+
+#check{
+    display: none;
+}
+
+
+ #menu{
+     position: absolute;
+
+     width: 20px;
+     height: 30px;
+     right: 40px;
+     top: 40px;
+     cursor: pointer;
+     display: none;
+ }
+ .bar{
+     height: 2px;
+     width: 100%;
+     background-color: #fff;
+     border-radius:10px;
+     display: block;
+     transition: all linear .5s;
+ }
+ #bar1{
+     transform: translateY(-4px);
+     background-color: #fff;
+ }
+ #bar3{
+    transform: translateY(4px);
+    background-color: #fff;
+}
+.show  #bar1{
+    transform: translateY(-3px) rotate(-45deg);
+}
+.show  #bar3{
+    transform: translateY(-8px) rotate(45deg);
+}
+.show #bar2{
+    opacity: 0;
+}
+.show .bar{
+    transform: rotate(270deg);
+}
+/* .bars{
+     position: absolute;
+     top: 40px;
+     right: 50px;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    display: none;
+}
+
+.bars::before , .bars::after{
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    background-color: #fff;
+    
+}
+
+.bars::before{
+    transform: translateY(-5px);
+}
+.bars::after{
+    transform: translateY(5px);
+}
+
+.bars.active{
+    background-color: transparent;
+}
+
+.bars.active::before{
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.bars.active::after{
+    transform: translateY(-5px) rotate(45deg);
+} */
+@media(max-width:992px){
+    .logo{
+        margin-left: 50px;
+    }
+}
+@media(max-width:768px){
+    #menu{
+        display: block;
+    }
+   
+    ul{
+        position: fixed;
+        width: 100%;
+        background-color: #000;
+        right:  -100%;
+        height: 100vh;
+        top: 80px;
+        transition: all linear 0.5s;
+       
+    }
+  .show ul{
+     right:  0;
+  }
+    ul li{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    ul li a{
+        font-size: 20px;
+    }
+    ul li a.active ,ul li a:hover{
+        background-color: transparent;
+        color: #ad4387;
+        font-size: 24px;
+        }
+    
+}
